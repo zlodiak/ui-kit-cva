@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui-kit';
+
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    salary: new FormControl('100'),
+  });
+
+  submit() {
+    console.log(this.form);
+  }
+
 }
