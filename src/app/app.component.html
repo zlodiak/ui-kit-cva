@@ -7,10 +7,11 @@
 
   <br>
 
-  <fieldset [disabled]="true">
-    <label>Salary: </label>
-    <input type="number" formControlName="salary">
-  </fieldset>
+  <number-input formControlName="salary" [disabled]="true"></number-input>
+
+  <br>
+
+  <number-input formControlName="age" [disabled]="false"></number-input>
 
   <br>
 
